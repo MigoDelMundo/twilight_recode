@@ -1,38 +1,973 @@
-.App {
+:root {
+  --darker-dark: rgb(31, 31, 35);
+  --dark: rgb(51, 51, 55);
+  --neutral: rgb(71, 71, 75);
+  --light: rgb(91, 91, 95);
+  --lighter-light: rgb(111, 111, 115);
+  --background-color: rgb(21, 21, 25)
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 2vh;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(41, 41, 47);
+  border-radius: 1.5vw;
+}
+
+
+body {
+  background-color: rgb(21, 21, 25);
+  color: white;
+  font-size: 0.8vw;
+}
+
+h3 {
+  font-size: 1.3vw;
+  padding: 0.3vw
+}
+
+input:focus {
+  outline: none;
+}
+
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1vw;
+  height: 7vh;
+  background-color: rgb(30, 30, 34);
+}
+
+.HeaderTitle {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 0;
+  justify-content: end;
+  font-size: 18px;
+  user-select: none;
+}
+
+.Header-Button {
+  border: 0.2vw solid rgb(41, 41, 45);
+  margin: 0.5vw;
+  padding: 0 0.3vw 0;
+  user-select: none;
+  height: 60%;
+  width: 9%;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 1vw;
+  text-align: center;
+  font-size: 2vh;
+}
+
+.Header-Button:hover {
+  background-color: rgb(51, 51, 55);
+  cursor: pointer;
+}
+
+.Header-Button.Selected {
+  border: calc(0.1vw + 0.1vh) solid rgb(210, 210, 232);
+}
+
+.SubpageSlot {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  background-color:  rgb(21, 21, 25);
+  height: 93vh;
+}
+
+.Subpage {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  background-color:  rgb(21, 21, 25);
+  height: 100%;
+}
+
+.SidebarTitle {
+  /* position: fixed;
+  left: 0;
+  top: 3.5vw; */
+  height: 2vw;
+  width: 18vw;
+}
+
+.Sidebar {
+  /* position: fixed;
+  left: 0;
+  top: 5.5vw; */
+  padding: 0.5vw;
+  height: 100%;
+  width: 18vw;
+  overflow: hidden;
+}
+
+.Sidebar-Button {
+  width: 15vw;
+  margin: 0.5vw 0.4vw 0.5vw;
+  background-color:  rgb(41, 41, 45);
+  border: calc(0.1vw + 0.1vh) solid rgb(41, 41, 45);
+  border-radius: 1vw;
+  padding: 0.2vw 1vw 0.2vw;
+  flex-shrink: 0;
+  user-select: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Sidebar-Button:hover {
+  background-color:  rgb(51, 51, 55);
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Sidebar-Button-Selected {
+  width: 15vw;
+  margin: 0.5vw 0.4vw 0.5vw;
+  background-color:  rgb(41, 41, 45);
+  border: calc(0.1vw + 0.1vh) solid rgb(210, 210, 232);
+  border-radius: 1vw;
+  padding: 0.2vw 1vw 0.2vw;
+  flex-shrink: 0;
+  user-select: none;
+  text-align: center;
+  vertical-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Centerpage {
+  position: fixed;
+  top: 7vh;
+  left: 0;
+  right: 0;
+  width: 40vw;
+  height: 93vh;
+  padding: 0.9vw;
+  margin: 0 auto 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.Centerpage-MessageComposer {
+  position: relative;
+  width: 98%;
+  height: 15%;
+  background-color: rgb(51, 51, 55);
+  margin: 0 auto 0;
+  border-radius: 1vw;
+  overflow-y: hidden;
+}
+
+.ProfilePicture {
+  display: block;
+  /* background-image: url(./assets/pictures/profilepicture.jpg); */
+  background-image: url(./assets/pictures/profilepicture.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;;
+  width: 13vh;
+  height: 13vh;
+  border-radius: 0.5vw;
+  margin-right: 1vw;
+}
+
+.ProfilePicture.FriendSuggestion.DefaultFemale {
+  background-image: url(./assets/pictures/defaultfemale.png);
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  top: 1vw;
+  right: 0;
+  z-index: -1;
+  width: 6vw;
+  height: 6vw;
+}
+
+.ProfilePicture.FriendSuggestion.DefaultMale {
+  background-image: url(./assets/pictures/defaultmale.png);
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  top: 1vw;
+  right: 0;
+  z-index: -1;
+  width: 6vw;
+  height: 6vw;
+}
+
+.ProfilePicture.Circle {
+  border-radius: 50%;
+}
+
+.ProfilePicture.Circle.ProfileTab {
+  width: 8vw;
+  height: 8vw;
+  position: absolute;
+  z-index: 2;
+  top: 8.5vw;
+  bottom: 0;
+  left: 16vw;
+  right: 16vw;
+  border: 0.5vw solid rgb(21, 21, 25);
+}
+
+.ProfilePicture.Gradient {
+  display: block;
+  /* background-image: url(./assets/pictures/profilepicture.jpg); */
+  background: linear-gradient(to right, 
+  rgba(255, 255, 255, 0) 0%, 
+  rgba(51, 51, 55, 1) 100%), 
+  url(./assets/pictures/profilepicture.jpg) center center / cover no-repeat;
+  position: relative;
+  z-index: 0;
+  width: 13vh;
+  height: 13vh;
+  border-radius: 0.5vw;
+  margin-right: 1vw;
+}
+
+.ProfileWallpaper {
+  display: block;
+  width: 100%;
+  height: 12vw;
+  background-image: url(./assets/pictures/profilewallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0.5vw;
+}
+
+
+.UserInputMessage {
+  position: absolute;
+  width: 25vw;
+  height: 60%;
+  display: block;
+  position: absolute;
+  top: 1vw; 
+  bottom: 0;
+  left: 7vw;
+  right: 0;
+  border-radius: 1vw;
+  border: none;
+  padding: 1vw;
+  overflow-x: scroll;
+  background-color: var(--neutral);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ContactBar {
+  position: fixed;
+  right: 0;
+  align-items: left;
+  justify-content: left;
+  height: 100%;
+  width: 18vw;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SendButton {
+  user-select: none;
+  position: absolute;
+  z-index: 2;
+  top: 1.7vw;
+  bottom: 0;
+  left: 33vw;
+  right: 0;
+  display: block;
+  width: 4.5vw;
+  height: 2vw;
+  background-color: rgb(145, 145, 158, 80%);
+  border-radius: 1vw;
+  align-items:  center;
+  text-align: center;
+  color:rgb(21, 21, 25);
+  font-weight: bold;
+  font-size: 1vw;
+  color: rgb(40, 40, 43);
+}
+
+.SendButton:hover {
+  background-color: rgb(185, 185, 198);
+  cursor: pointer;
+}
+
+.FeedPost {
+  display: block;
+  width: 90%;
+  min-height: 7vw;
+  padding: 1.2vw 1vw 0.2vw;
+  margin: 2vw auto 2vw;
+  border: 0.2vw solid var(--neutral);
+  border-radius: 1vw;
+}
+
+.FeedPost-PosterInfo {
+  font-size: 1.25vw;
+  font-weight: bold;
+  padding-bottom: 1vw;
+}
+
+.ActionBar {
+  margin-bottom: 4vw;
+}
+
+.FeedPost-Button {
+  float: left;
+  width: 30%;
+  margin: 0.3vw 1% 0.5vw;
+  height: 2vw;
+  background-color: rgb(30, 30, 34);
+  color: rgb(195, 195, 195);
+  font-size: 1vw;
+  font-weight: bolder;
+  text-align: center;
+  vertical-align: center;
+  border: 0.2vw solid var(--neutral);
+  border-radius: 1vw;
+  user-select: none;
+}
+
+.FeedPost-Button:hover {
+  background-color: rgb(101, 101, 105);
+  cursor: pointer;
+}
+
+.FeedPost-Button.Clicked {
+  background-color: rgb(152, 152, 157);
+  color: rgb(243, 243, 255);
+  border-color: rgb(243, 243, 255);
+}
+
+.PostPictureSlot {
+  width: 100%;
+  height: 15vw;
+  background-color: rgb(31, 31, 35, 0.5);
+  margin: 1vw auto 0;
+  border-radius: 1vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ProfileDescription {
+  width: 98%;
+  min-height: 13vw;
+  margin: 1vw auto 0;
+  padding: 3vw 0.5vw 3vw;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.ProfileDescriptionName {
+  font-size: calc(1.1vw + 1.1vh);
+  font-weight: bold;
+  width: 100%;
+}
+
+.ProfileDescriptionHandle {
+  font-size: calc(0.48vw + 0.48vh);
+  width: 100%;
+  font-style: italic;
+  color: rgb(101, 101, 105);
+}
+
+.ProfileDescriptionDescription {
+  width: 70%;
+  color: rgb(161, 161, 165);
+  margin: 1vw auto 1.5vw;
+}
+
+.ProfileDescriptionHobby {
+  display: inline-block;
+  width: 30%;
+  height: auto;
+  margin: 0.3vw 1.25% 0;
+  border: calc(0.1vw + 0.1vh) solid rgb(41, 41, 45);
+  border-radius: 1vw;
+  user-select: none;
+}
+
+.ProfileDescriptionHobby:hover {
+  border-color: rgb(101, 101, 105);
+}
+
+.FriendsPage-MainBlock {
+  /* border: 0.2vw solid var(--neutral); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  width: 95%;
+  height: 40%;
+  margin: 1vw auto 0;
+  text-align: center;
+  justify-content: center;
+  text-align: left;
+  overflow-y: hidden;
+}
+
+.FriendsPage-MainBlock-Background {
+  width: 98%;
+  height: 50%;
+  margin: 0 auto 0;
+  border-radius: 0.5vw;
+  background-image: url('./assets/pictures/pexels-edmond-dantès-8553865.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.FriendsPage-MainBlock-Texts {
+  position: relative;
+  padding: 0.2vw 0.5vw 0;
+}
+
+.FriendSuggestions-Title {
+  background-color: var(--background-color);
+  border-radius: 1vw;
+  padding: 0.5vw;
+  width: 70%;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 2.5vh auto 2.5vh;
+  font-weight: bold;
+  font-size: 4vh;
+  user-select: none;
+}
+
+.FriendSuggestion-Description {
+  padding-top: 5%;
+  font-size: 2vh;
+}
+
+.FriendSuggestionsDiv {
+  width: 95%;
+  margin: 1vw auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 12vw;
+  grid-gap: 1vw;
+}  
+
+.FriendSuggestion {
+  position: relative;
+  /* border: 0.2vw solid rgb(161, 161, 165); */
+  border-radius: 1vw;
+  width: 100%;
+  padding: 0.4vw;
+  overflow-y: scroll;
+}
+
+
+.FS-Name {
+  margin: 12% 0 0;
+  font-size: calc(0.8vw + 0.8vh);
+}
+
+.FS-Loc {
+  margin: 0 0.4vw 0;
+  font-style: italic;
+}
+
+.FS-Desc {
+  margin: 0.5vw 0.4vw 0;
+}
+
+.FS-AgeGender {
+  font-weight: bold;
+}
+
+.AddFriendSuggestion {
+  position: absolute;
+  bottom: 0.5vw;
+  right: 8%;
+  width: 30%;
+  min-height: 7%;
+  z-index: 2;
+  border-radius: 1vw;
+  border: 0.2vw solid rgb(161, 161, 165);
+  padding-bottom: 5px;
+  text-align: center;
+  justify-content: center;
+  user-select: none;
+  background-color: rgb(21, 21, 25);
+}
+
+.AddFriendSuggestion:hover {
+  background-color: rgb(101, 101, 105);
+  cursor: pointer;
+}
+
+.AddFriendSuggestion.Clicked {
+  background-color: rgb(152, 152, 157);
+  color: rgb(243, 243, 255);
+  border-color: rgb(243, 243, 255);
+}
+
+.Groups-HeaderBlock {
+  display: block;
+  align-items: center;
+  border-radius: 1vw;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(41, 41, 45) 40%), url('./assets/pictures/group_photo.png') no-repeat center / cover;
+  height: 10vw;
+  padding: 1vw;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 2vw;
+}
+
+
+.Groups-HeaderBlock h3 {
+  font-size: calc(1.4vw + 1.4vh);
+}
+
+.Groups-HeaderBlock p {
+  display: block;
+  font-size: calc(0.4vw + 0.4vh);
+  padding-left: 1vw;
+  width: 60%;
+  font-style: italic;
+}
+
+.Groups-Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 12vw;
+  grid-gap: 1vw;
+}
+
+.Groups-GridCell {
+  position: relative;
+  /* border: 0.2vw solid rgb(161, 161, 165); */
+  border-radius: 1vw;
+  width: 100%;
+  padding: 1vw;
+  overflow-y: hidden;
+}
+
+.JoinGroupButton {
+  margin: 0 auto 0;
+  width: 95%;
+  min-height: 4%;
+  border-radius: 1vw;
+  border: 0.2vw solid rgb(161, 161, 165);
+  text-align: center;
+  padding: 0.2vw;
+  justify-content: center;
+  user-select: none;
+  background-color: rgb(21, 21, 25);
+  z-index: 2;
+}
+
+.JoinGroupButton:hover {
+  background-color: rgb(101, 101, 105);
+  cursor: pointer;
+}
+
+.JoinGroupButton.Clicked {
+  background-color: rgb(152, 152, 157);
+  color: rgb(243, 243, 255);
+  border-color: rgb(243, 243, 255);
+}
+
+.Groups-Name {
+  width: 80%;
+  font-size: 1.7vw;
+}
+
+.Groups-Members {
+  font-style: italic;
+}
+
+.Groups-Description {
+  padding-top: 0.4vw;
+  font-size: 0.7em;
+}
+
+.Groups-Image {
+  position: absolute;
+  right: 2vw;
+  z-index: -1;
+  background-image: url("./assets/pictures/group-logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 11vw;
+  width: 11vw;
+}
+
+.Games-Grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.3vw;
+}
+
+.Games-GridCell {
+  position: relative;
+  border: 0.2vw solid var(--neutral);
+  border-radius: 1vw;
+  width: 100%;
+  overflow-y: hidden;
+  min-height: 25vw;
+}
+
+.Game-Image {
+  width: 100%;
+  height: 50%;
+  background-image: url(./assets/pictures/defaultgamelogo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Game-Image.Adventure {
+  background-image: url(./assets/pictures/game_pictures/adventure.png);
+}
+
+.Game-Image.Puzzle {
+  background-image: url(./assets/pictures/game_pictures/puzzle.png);
+}
+
+.Game-Image.Romance {
+  background-image: url(./assets/pictures/game_pictures/romance.png);
+}
+
+.Game-Image.Sandbox {
+  background-image: url(./assets/pictures/game_pictures/sandbox.png);
+}
+
+.Game-Image.Shooter {
+  background-image: url(./assets/pictures/game_pictures/shooter.png);
+}
+
+.Game-Texts {
+  padding: 0.3vw;
+  padding-top: 1vw;
+  background-color: rgb(29, 29, 30);
+  height: 50%;
+}
+
+.Game-Texts .Title {
+  margin-left: 0.7vw;
+  margin-top: 0.4vw;
+  font-size: calc(0.55vw + 0.55vh);
+  font-weight: bold;
+}
+
+.Game-Texts .Description {
+  margin-left: 0.7vw;
+  font-size: calc(0.55vw + 0.55vh);
+  font-style: italic;
+}
+
+.Game-Texts .PlayGame {
+  margin: -0.2vw auto 0.5vw;
+  width: 80%;
+  min-height: 4%;
+  border-radius: 1vw;
+  border: 0.2vw solid var(--neutral);
+  text-align: center;
+  padding: 0.2vw;
+  justify-content: center;
+  user-select: none;
+  background-color: rgb(21, 21, 25);
+  z-index: 2;
+}
+
+.Game-Texts .PlayGame:hover {
+  background-color: rgb(101, 101, 105);
+  cursor: pointer;
+}
+
+.Game-Texts .PlayGame.Clicked {
+  background-color: rgb(152, 152, 157);
+  color: rgb(243, 243, 255);
+  border-color: rgb(243, 243, 255);
+}
+
+.ContactBar-TextHeader {
+  display: block;
+  margin-bottom: 0;
+}
+
+.ContactBar-Selection {
+  width: 15vw;
+  margin: 0.5vw 0.4vw 0.5vw;
+  background-color:  rgb(41, 41, 45);
+  border: calc(0.1vw + 0.1vh) solid rgb(41, 41, 45);
+  border-radius: 1vw;
+  padding: 0.2vw 1vw 0.5vw;
+  flex-shrink: 0;
+  user-select: none;
+  text-align: left;
+}
+
+.ContactBar-Selection:hover {
+  background-color:  rgb(51, 51, 55);
+  cursor: pointer;
+}
+
+.MessageColumn {
+  display: block;
+}
+
+.MessageColumn.Left {
+  border-right: 0.2vw solid var(--neutral);
+  background-color: rgb(21, 21, 25);
+  width: 28%;
+  height: 100%;
+  padding: 1%;
+  overflow-y: scroll;
+}
+
+.MessageColumn.Center {
+  position: relative;
+  background-color: rgb(21, 21, 25);
+  width: 55%;
+  height: 100%;
+}
+
+.MessageColumn.Right {
+  border-left: 0.2vw solid var(--neutral);
+  background-color: rgb(21, 21, 25);
+  width: 25%;
+  height: 100%;
+}
+
+.MessageColumn-Header {
+  display: grid;
+  grid-template-columns: 100%;
+  padding: 0.4vw;
+  position: absolute;
+  top: 0;
+  border-bottom: 0.2vw solid var(--neutral);
+  background-color: rgb(21, 21, 25);
+  width: 100%;
+  height: 10%;
+  overflow: hidden;
+}
+
+.MessageColumn-ConversationContent {
+  font-size: 2vh;
+  width: 100%;
+  height: 90%;
+  background-color: rgb(21, 21, 25);
+  margin-top: 8vh;
+  padding: 2vw;
+  padding-bottom: 12%;
+  overflow-y: scroll;
+}
+
+.MessageColumn-ConversationContent.NoConversationSelected {
+  color: rgb(101, 101, 105);
+  font-style: italic;
+  font-size: 3vh;
+  margin-bottom: 0;
+  padding-bottom: 0vh;
+}
+
+
+.MessageColumn-Toolbar {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 60% 10%;
+  position: absolute;
+  bottom: 0;
+  border-top: 0.2vw solid var(--neutral);
+  background-color: rgb(21, 21, 25);
+  width: 100%;
+  height: 10%;
+}
+
+.SearchConversation {
+  width: 100%;
+  margin: 0 auto 0;
+  padding: 0.5vw;
+  border-radius: 2vw;
+  border: 0.2vw solid var(--neutral);
+  background-color: rgb(30, 30, 34);
+  color: rgb(101, 101, 105);
+}
+
+.ConversationSelector {
+  display: flex;
+  grid-template-columns: 20% 80%;
+  padding: 1vh;
+  min-height: 70px;
+  overflow-y: hidden;
+  width: 100%;
+  background-color: rgb(21, 21, 25);
+  margin: 1vw auto 1vw;
+  border-radius: 1vw;
+  user-select: none;
+  overflow: hidden;
+}
+
+.Messages-ContactsHeaderText {
+  margin-bottom: 1vw;
+}
+
+.ConversationPicture {
+  display: grid;
+  height: 100%;
+  background-color: var(--neutral);
+  border-radius: 1vw;
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+}
+
+.ConversationPicture.Female {
+  background-image: url(./assets/pictures/defaultfemale.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ConversationPicture.Male {
+  background-image: url(./assets/pictures/defaultmale.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ConversationPicture.Enlarged {
+  display: grid;
+  height: 100%;
+  background-color: var(--neutral);
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 8vw;
+  height: 8vw;
+  margin: 3vw auto 1vw;
+}
+
+.ConversationSelector-Texts {
+  width: 70%;
+  padding-left: 0.8vw;
+}
+
+.ConversationSelector:hover {
+  cursor: pointer;
+  background-color: rgb(31, 31, 35)
+}
+
+.ConversationSelector.Selected {
+  background-color: rgb(41, 41, 45);
+}
+
+.Conversation-Name {
+  font-size: 1.9vh;
+  padding: 0;
+}
+
+.Last-Message {
+  font-size: 1.7vh;
+  margin: 0.1vw 0;
+}
+
+.MessageDate {
+  font-size: 1.4vh;
+  font-style: italic;
+  color: rgb(152, 152, 157);
+}
+
+.MessageColumn-Header-Information {
+  font-size: 3vh;
+  font-weight: bold;
+  padding: 1vw 0.4vw 1vw;
+  display: grid;
+  height: 100%;
+  vertical-align: middle;
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.MessageColumn-Toolbar-Box {
+  font-size: 1.6vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  padding: 0.2vw 0.5vw 0.2vw;
+  margin: 0.5vw auto 0;
+  width: 90%;
+  height: 75%;
+  border: 0.2vw solid rgb(41, 41, 45);
+  border-radius: 1vw;
+}
+
+.MessageColumn-Toolbar-Box.MessageBar {
+  width: 90%;
+  user-select: all;
+  cursor: default;
+  padding-left: 0.5vw;
+  background-color: rgb(86, 86, 90);
+  color: white;
+}
+
+.MessageMain {
+  padding: 2vh;
+}
+
+.MessageSender {
+  font-size: 2.3vh;
+  padding-right: 1vh;
+  font-weight: bold;
+  color: rgb(111, 111, 115);
+}
+
+.MessageAccessoryDetails {
+  font-size: 2vh;
+  font-style: italic;
+  color: rgb(111, 111, 115);
+}
+
+.MessageTimestamp {
+  font-size: 2vh;
+  font-style: italic;
+  color: rgb(131, 131, 135);
+  padding-left: 1vh;
+}
+
+.ConversationNameRightCol {
+  margin: 1vw auto 1vw;
+  text-align: center;
+  width: 70%;
+  font-size: 1.6vw;
+  font-weight: bold;
+}
+
+.RightColOptions {
+  margin: 3vw auto 3vw;
+  width: 60%;
+  font-size: 1.1vw;
+  user-select: none;
+}
+
+.RightColOption {
+  background-color: var(--dark);
+  margin: 0.5vw auto 0.5vw;
+  padding: 0.3vw;
+  padding-left: 1vw;
+  border-radius: 1vw;
+  cursor: pointer;
+}
+
+.RightColOption:hover {
+  background-color: var(--neutral);
+}
+
+.CreditsMain {
+  padding: 2vw;
+  font-size: 1.2rem;
+  margin: 0 auto 0;
 }
