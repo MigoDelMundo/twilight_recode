@@ -7,6 +7,8 @@ function Groups() {
   return (
     <>
       <div className="Groups-HeaderBlock">
+        <div className="Groups-GroupPhoto" />
+        <div className="Groups-GroupText"></div>
         <h3>Group Page</h3>
         <p>
           Here, you can easily find and join new groups that align with your

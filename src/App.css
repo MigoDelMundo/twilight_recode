@@ -433,6 +433,7 @@ input:focus {
   background-color: var(--background-color);
   border-radius: 1vw;
   padding: 0.5vw;
+  padding-bottom: 2vw;
   width: 70%;
   position: absolute;
   top: -25%;
@@ -441,11 +442,12 @@ input:focus {
   text-align: center;
   margin: 2.5vh auto 2.5vh;
   font-weight: bold;
-  font-size: 4vh;
+  font-size: 16px;
   user-select: none;
 }
 
 .FriendSuggestion-Description {
+  overflow-y: scroll;
   padding-top: 5%;
   font-size: 2vh;
 }
@@ -518,25 +520,13 @@ input:focus {
   display: block;
   align-items: center;
   border-radius: 1vw;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(41, 41, 45) 40%), url('./assets/pictures/group_photo.png') no-repeat center / cover;
-  height: 10vw;
+  height: 40%;
   padding: 1vw;
   text-align: left;
   overflow: hidden;
-  margin-bottom: 2vw;
-}
-
-
-.Groups-HeaderBlock h3 {
-  font-size: calc(1.4vw + 1.4vh);
-}
-
-.Groups-HeaderBlock p {
-  display: block;
-  font-size: calc(0.4vw + 0.4vh);
-  padding-left: 1vw;
-  width: 60%;
-  font-style: italic;
+  width: 90%;
+  background-color: red;
+  margin: 0 auto 0;
 }
 
 .Groups-Grid {
