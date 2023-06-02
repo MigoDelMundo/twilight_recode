@@ -9,8 +9,8 @@ function Groups() {
       <div className="Groups-HeaderBlock">
         <div className="Groups-GroupPhoto" />
         <div className="Groups-GroupText"></div>
-        <h3>Group Page</h3>
-        <p>
+        <div className="Groups-HeaderTitle">🛞 Group Pages 🛞</div>
+        <p className="Groups-HeaderDesc">
           Here, you can easily find and join new groups that align with your
           interests and hobbies. Whether you're looking to connect with other
           fans of a particular TV show, discuss the latest trends in fashion, or

@@ -28,10 +28,10 @@ const FeedPost = ({ name, date, text }: FeedPostProps) => {
   return (
     <div className="FeedPost">
       <div className="DefaultPicture" />
-      <span className="FeedPost-PosterInfo">
-        {name}, {date.toLocaleDateString()}
-      </span>
-      <br />
+      <span className="FeedPost-PosterInfo">🌙 {name}</span>
+      <p className="FeedPost-DateInfo">
+        📅 Posted on {date.toLocaleDateString()}
+      </p>
       <p className="FeedPost-Paragraph">{text}</p>
       {/* <div className="PostPictureSlot" /> */}
       <div className="ActionBar">

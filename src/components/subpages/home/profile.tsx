@@ -35,6 +35,11 @@ const Profile = () => {
       date: new Date("2023-04-11"),
       text: "Had an amazing time speaking at a conference on real estate investing today 🗣️🏢 #publicspeaking",
     },
+    {
+      name: ProfileName,
+      date: new Date("2023-01-01"),
+      text: "If you see this post, you must've scrolled once or twice to see this. I know, not that well-hidden, but it's not like I've wanted to hide this in the first place. I just wanted to say that if you saw this post, I'm wishing you great fortune ahead, whether it would be one week from now or one month or a year even. Stay strong, brethren. ✌️",
+    },
   ];
   return (
     <>
