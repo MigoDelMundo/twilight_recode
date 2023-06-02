@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/twilight_recode/static/css/main.9621d8ae.css",
-    "main.js": "/twilight_recode/static/js/main.c347aa41.js",
+    "main.css": "/twilight_recode/static/css/main.588e998a.css",
+    "main.js": "/twilight_recode/static/js/main.f17d28eb.js",
     "static/js/496.3e00b8f4.chunk.js": "/twilight_recode/static/js/496.3e00b8f4.chunk.js",
     "static/media/pexels-edmond-dantès-8553865.jpg": "/twilight_recode/static/media/pexels-edmond-dantès-8553865.faa8d1d72f2fe5522bef.jpg",
     "static/media/sandbox.png": "/twilight_recode/static/media/sandbox.43072f620c8b0112fd68.png",
     "static/media/adventure.png": "/twilight_recode/static/media/adventure.fbed02f93711852b08ed.png",
+    "static/media/group_photo.png": "/twilight_recode/static/media/group_photo.38e88331e740e44147fb.png",
     "static/media/shooter.png": "/twilight_recode/static/media/shooter.fe0f76674fbdd6549768.png",
     "static/media/defaultfemale.png": "/twilight_recode/static/media/defaultfemale.051936665d78582af0f9.png",
     "static/media/romance.png": "/twilight_recode/static/media/romance.d257b81470febf01cbc3.png",
@@ -16,12 +17,12 @@
     "static/media/group-logo.png": "/twilight_recode/static/media/group-logo.d3d5fc192e5e7d93d5b5.png",
     "static/media/profilepicture.jpg": "/twilight_recode/static/media/profilepicture.546d037a814b02323eb2.jpg",
     "index.html": "/twilight_recode/index.html",
-    "main.9621d8ae.css.map": "/twilight_recode/static/css/main.9621d8ae.css.map",
-    "main.c347aa41.js.map": "/twilight_recode/static/js/main.c347aa41.js.map",
+    "main.588e998a.css.map": "/twilight_recode/static/css/main.588e998a.css.map",
+    "main.f17d28eb.js.map": "/twilight_recode/static/js/main.f17d28eb.js.map",
     "496.3e00b8f4.chunk.js.map": "/twilight_recode/static/js/496.3e00b8f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9621d8ae.css",
-    "static/js/main.c347aa41.js"
+    "static/css/main.588e998a.css",
+    "static/js/main.f17d28eb.js"
   ]
 }
