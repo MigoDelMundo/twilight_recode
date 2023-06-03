@@ -1,7 +1,7 @@
 {
   "homepage": "https://MigoDelMundo.github.io/twilight_recode",
   "name": "twilight-recode",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "CC-BY-NC-ND-4.0",
   "dependencies": {
     "bootstrap": "^5.3.0",
