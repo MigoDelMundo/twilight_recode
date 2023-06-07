@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/twilight_recode/static/css/main.9bd235f2.css",
-    "main.js": "/twilight_recode/static/js/main.210c401f.js",
+    "main.css": "/twilight_recode/static/css/main.cd4feb79.css",
+    "main.js": "/twilight_recode/static/js/main.068ca140.js",
     "static/js/496.3e00b8f4.chunk.js": "/twilight_recode/static/js/496.3e00b8f4.chunk.js",
     "static/media/pexels-edmond-dantès-8553865.jpg": "/twilight_recode/static/media/pexels-edmond-dantès-8553865.faa8d1d72f2fe5522bef.jpg",
     "static/media/sandbox.png": "/twilight_recode/static/media/sandbox.43072f620c8b0112fd68.png",
@@ -17,12 +17,12 @@
     "static/media/group-logo.png": "/twilight_recode/static/media/group-logo.d3d5fc192e5e7d93d5b5.png",
     "static/media/profilepicture.jpg": "/twilight_recode/static/media/profilepicture.546d037a814b02323eb2.jpg",
     "index.html": "/twilight_recode/index.html",
-    "main.9bd235f2.css.map": "/twilight_recode/static/css/main.9bd235f2.css.map",
-    "main.210c401f.js.map": "/twilight_recode/static/js/main.210c401f.js.map",
+    "main.cd4feb79.css.map": "/twilight_recode/static/css/main.cd4feb79.css.map",
+    "main.068ca140.js.map": "/twilight_recode/static/js/main.068ca140.js.map",
     "496.3e00b8f4.chunk.js.map": "/twilight_recode/static/js/496.3e00b8f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bd235f2.css",
-    "static/js/main.210c401f.js"
+    "static/css/main.cd4feb79.css",
+    "static/js/main.068ca140.js"
   ]
 }
