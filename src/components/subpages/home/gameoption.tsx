@@ -18,11 +18,7 @@ const GameOption = ({
         <div className="Game-Texts">
           <div className="PlayGame">Play</div>
           <span className="Title">🎮 {gameTitle}</span>
-          <p className="Description">
-            {gameDescription.length > 120
-              ? `${gameDescription.slice(0, 120)}...`
-              : gameDescription}
-          </p>
+          <p className="Description">{gameDescription}</p>
         </div>
       </div>
     </>
